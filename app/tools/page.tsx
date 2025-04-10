@@ -61,9 +61,9 @@ const page = () => {
                     <div className='font-black text-2xl text-blue-900 p-6'>{page.section}</div>
                     <div className='flex flex-row gap-4 justify-start'>
 
-                        {page.cardData.map((card, index) => (
+                        {page.cardData.map((card) => (
 
-                            <DjIntroCard key={index} {...card} />
+                            <DjIntroCard {...card} />
 
                         ))}
                     </div>
