@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DjHeader from "./componnets/DjHeader";
+import DjFooter from "./componnets/DjFooter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +30,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <DjHeader></DjHeader>
-        <div className="h-[calc(100vh-336px)]">
+        <div className="h-[calc(100vh-336px)] overflow-scroll">
           {children}
         </div>
+        <DjFooter></DjFooter>
       </body>
     </html>
   );

@@ -56,14 +56,14 @@ const page = () => {
     }];
     return (
         <div>
-            {pageData.map((page) => (
+            {pageData.map((section,j) => (
                 <div>
-                    <div className='font-black text-2xl text-blue-900 p-6'>{page.section}</div>
+                    <div className='font-black text-2xl text-blue-900 p-6'>{section.section}</div>
                     <div className='flex flex-row gap-4 justify-start'>
 
-                        {page.cardData.map((card) => (
+                        {section.cardData.map((card, i) => (
 
-                            <DjIntroCard {...card} />
+                            <DjIntroCard key={i+100*j} {...card} />
 
                         ))}
                     </div>
