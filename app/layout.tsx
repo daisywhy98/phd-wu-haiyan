@@ -25,11 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <DjHeader></DjHeader>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <DjHeader></DjHeader>
+        <div className="h-[calc(100vh-336px)]">
+          {children}
+        </div>
       </body>
     </html>
   );
