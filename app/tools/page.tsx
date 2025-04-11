@@ -66,7 +66,7 @@ const page = () => {
             {pageData.map((section,j) => (
                 <div key={j} >
                     <div className='font-black text-2xl text-blue-900 p-6' >{section.section}</div>
-                    <div className='flex flex-row gap-4 justify-start'>
+                    <div className='grid grid-cols-2 sm:grid-cols-4 gap-4 p-4'>
 
                         {section.cardData.map((card) => (
 
