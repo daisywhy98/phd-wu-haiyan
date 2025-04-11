@@ -1,13 +1,16 @@
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <div>hello</div>
+    <div>
+      <main className="flex flex-col gap-4">
+        <div className="slide-in-section bg-green-100 flex flex-row justify-between items-center">
+          <img alt='a photo'
+            src='/images/home-background.png' />
+          
+          <div className="text-7xl max-w-96 text-right text-green-950">Study<br/> smarter,<br/> not harder.</div>
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        
-      </footer>
+
     </div>
   );
 }
