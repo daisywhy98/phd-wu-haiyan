@@ -64,8 +64,8 @@ const page = () => {
     return (
         <div>
             {pageData.map((section,j) => (
-                <div>
-                    <div className='font-black text-2xl text-blue-900 p-6' key={j} >{section.section}</div>
+                <div key={j} >
+                    <div className='font-black text-2xl text-blue-900 p-6' >{section.section}</div>
                     <div className='flex flex-row gap-4 justify-start'>
 
                         {section.cardData.map((card) => (
