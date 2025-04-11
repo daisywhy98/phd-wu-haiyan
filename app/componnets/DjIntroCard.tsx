@@ -18,6 +18,7 @@ const DjIntroCard = (cardInfo: InfoCard) => {
 export default DjIntroCard
 
 export interface InfoCard {
+    id:number;
     title?: string;
     description?: string;
     imageUrl?: string;

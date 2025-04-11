@@ -4,12 +4,13 @@ import DjIntroCard from '../componnets/DjIntroCard'
 const page = () => {
     const pageData = [{
         section: 'Math', cardData: [
-            {
+            {   id:101,
                 title: 'Graph Calculator',
                 description: 'This is a description for the card1.',
                 imageUrl: '/images/graphing.png',
                 link: 'https://www.symbolab.com/graphing-calculator'
             }, {
+                id:102,
                 title: 'Calculus Calculator',
                 description: 'This is a description for the card2.',
                 imageUrl: '/images/calculus.png',
@@ -17,22 +18,26 @@ const page = () => {
             }]
     }, {
         section: 'Physics', cardData: [
-            {
+            {   
+                id:201,
                 title: 'Forde simulation',
                 description: 'This is a description for the card2.',
                 imageUrl: '/images/force.jpg',
                 link: 'https://phet.colorado.edu/sims/html/forces-and-motion-basics/latest/forces-and-motion-basics_all.html'
             }, {
+                id:202,
                 title: 'Wave interference simulation',
                 description: 'This is a description for the card2.',
                 imageUrl: '/images/wave.jpg',
                 link: 'https://phet.colorado.edu/sims/html/wave-interference/latest/wave-interference_all.html'
             }, {
+                id:203,
                 title: 'Circuit simulation',
                 description: 'This is a description for the card2.',
                 imageUrl: '/images/circuit.jpg',
                 link: 'https://phet.colorado.edu/sims/html/circuit-construction-kit-ac-virtual-lab/latest/circuit-construction-kit-ac-virtual-lab_all.html'
             },{
+                id:204,
                 title: 'Charge simulation',
                 description: 'This is a description for the card2.',
                 imageUrl: '/images/charge.jpg',
@@ -42,11 +47,13 @@ const page = () => {
     }, {
         section: 'Chemistry', cardData: [
             {
+                id:301,
                 title: 'Molecule polarity simulation',
                 description: 'This is a description for the card2.',
                 imageUrl: '/images/molecule.jpg',
                 link: 'https://phet.colorado.edu/sims/html/molecule-polarity/latest/molecule-polarity_all.html'
             }, {
+                id:302,
                 title: 'Gas properties simulation',
                 description: 'This is a description for the card2.',
                 imageUrl: '/images/gas.jpg',
@@ -58,12 +65,12 @@ const page = () => {
         <div>
             {pageData.map((section,j) => (
                 <div>
-                    <div className='font-black text-2xl text-blue-900 p-6'>{section.section}</div>
+                    <div className='font-black text-2xl text-blue-900 p-6' key={j} >{section.section}</div>
                     <div className='flex flex-row gap-4 justify-start'>
 
-                        {section.cardData.map((card, i) => (
+                        {section.cardData.map((card) => (
 
-                            <DjIntroCard key={i+100*j} {...card} />
+                            <DjIntroCard key={card.id} {...card} />
 
                         ))}
                     </div>
