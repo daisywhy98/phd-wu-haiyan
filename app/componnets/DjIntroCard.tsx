@@ -4,12 +4,12 @@ import React from 'react'
 
 const DjIntroCard = (cardInfo: InfoCard) => {
     return (
-        <div className='w-1/3 h-96 p-6'>
-            <a href={cardInfo.link} target="_blank" rel="noopener noreferrer">
+        <div className='h-96 p-6 border rounded-2xl'>
+            <a href={cardInfo.link} target="_blank" rel="noopener noreferrer" className=' flex flex-col gap-2'>
                 <img src={cardInfo.imageUrl} alt={cardInfo.title}
                     width={300} height={300} />
-                <div >{cardInfo.title}</div>
-                <div >{cardInfo.description}</div>
+                <div className='text-2xl font-bold'>{cardInfo.title}</div>
+                <div className='text-l'>{cardInfo.description}</div>
             </a>
         </div>
     )
