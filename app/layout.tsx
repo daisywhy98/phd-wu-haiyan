@@ -28,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
       >
         <DjHeader></DjHeader>
         <div className="h-[calc(100vh-336px)] overflow-scroll">

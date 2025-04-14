@@ -3,6 +3,7 @@ import React from 'react'
 
 
 const DjIntroCard = (cardInfo: InfoCard) => {
+    
     return (
         <div className='h-96 p-6 border rounded-2xl'>
             <a href={cardInfo.link} target="_blank" rel="noopener noreferrer" className=' flex flex-col gap-2'>

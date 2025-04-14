@@ -1,3 +1,5 @@
+
+
 import React from 'react'
 import DjIntroCard from '../componnets/DjIntroCard'
 
@@ -17,9 +19,7 @@ const page = () => {
                     </div>
                 </div>
 
-            )
-            )
-            }
+            ))}
 
         </div>
     )
